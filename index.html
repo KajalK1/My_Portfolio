@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+       
+        <div class="navbar">
+    
+                <img src="/images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Education</a></li>    
+                    <li><a href="#">Skills</a></li>
+                </ul>
+        </div>
+        <div class="header-text">
+            <p>BTech Student</p>
+            <h1>Hi, I'm <span>Kajal Kedar</span><br> From Nashik.</h1>
+        </div>
+        <div class="image">
+            <img src="/images/First_Page.png" class="girl">
+        </div>
+    
+        <div class="icons">
+            <br>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+    </div>
+  <!--  ----------------about---------  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/Second_page.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hello, I'm Kajal Nandkishor Kedar, currently pursuing a Bachelor's Degree 
+                        (Second-Year) in Artificial Intelligence and Data Science (AI-DS) at 
+                        K.K.Wagh College of Engineering in Nashik. I've actively participated in
+                         various coding tests and hackathons. My skill set includes C, C++, Python, HTML, 
+                        CSS,I'm now focusing on stregthening my understanding of DBMS and data structures.
+                        Driven by curiosity,I'm exploring new technologies, and thrive in 
+                        collaboration environments.Let's contribute and innovate together!
+                    </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                                <li><span>Programming Languages</span><br>C, C++,Python, Data Structures</li>
+                                <li><span>Web Development</span><br>HTML, CSS ,Java-Script</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>School - Madhymik Vidhyalay Untawadi, Nashik</li>
+                                <li><span>2020 - 2022</span><br>Junior College - Amro Junior College, Vilholi, Nashik</li>
+                                <li><span>2022 - 2026</span><br>Engineering - K.K.Wagh College, Nashik</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023</span><br>Drone Technology - AICTE Idea Lab</li>
+                                <li><span>2023</span><br>Skybug - Frontend Web Developer (Virtual Internship)</li>
+                                <li><span>2024</span><br>Project Compitition</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontets = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        }
+
+    </script>
+</body>
+</html>
